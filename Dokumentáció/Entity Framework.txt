@@ -1,0 +1,28 @@
+Entity Framework
+Az ADO.NET Entitás-keretrendszer (EF, Entity Framework) egy objektum-relációs leképező keretrendszer a .NET keretrendszerhez.
+
+-Az ADO.NET Entitás Keretrendszer architektúrája az alábbiakból áll össze növekvő absztrakciós sorrendben:
+
+Adatforrás-specifikus kiszolgálók, amely absztrakciós ADO.NET felületeket használnak fel az adatbázis kapcsolathoz, amikor sémák szerint programozunk.
+
+Leképzés kiszolgáló, egy adatbázis függő kiszolgáló, amely lefordítja az Entitás SQL utasításfát lekérdezésekké az adatbázis natív SQL nyelvének megfelelően. Ez magába foglalja a tároló függő hidat, azt a komponenst, amely felelős a generikus utasításfák tárolófüggő utasításfákra való fordításáért.
+
+EDM elemző és nézet leképezés, amely felhasználja az adatmodell SDL specifikációját, és az alapján, ahogyan az leképez a relációs modellre, lehetővé teszi az elméleti modellben történő programozást. A relációs sémából létrehoz nézeteket, amely megfelel az elméleti modellnek. Összegyűjti az információkat különböző táblákból entitásokat kialakítva belőlük, és szétosztja, illetve frissíti az entitás adatait a különböző táblákban, függetlenül attól, mely táblák tartoznak az entitáshoz.
+
+Lekérdezés és frissítés csővezeték, azaz pipeline, folyamat-lekérdezések, filterek és frissítési kérelmek küldése, hogy átalakítsa őket kanonikus utasításfákká, amelyeket tároló specifikus lekérdezésekké alakít a leképzés szolgáltató segítségével.
+Metaadat szolgáltatók, ez kezeli az összes entitáshoz rendelt metaadatot, kapcsolatokat és leképezéseket.
+Tranzakciók, elérhetővé teszik a tár tranzakciós szolgáltatásait. Amennyiben a felhasznált tároló nem támogatja a tranzakciókat, a szükségeknek megfelelően ez a réteg valósítja meg ezeket.
+
+Koncepciós réteg API, egy olyan környezet, amely lehetővé teszi a koncepciós séma programozását. Követi az ADO.NET mintákat Connection objektumok használatával, hogy leképezés szolgáltatókra hivatkozzon, használja a Command objektumokat hogy leképezések küldjön el, és EntityResultSets vagy EntitySets-ként adja vissza a végeredményt.
+
+Kapcsolat nélküli/leválasztott komponensek, helyileg tárolják az adathalmazt és az entitás halmazokat, hogy kihasználják az ADO.NET Entitás Keretrendszer lehetőségeit egy alkalmanként csatlakozó környezetben.
+Beágyazott adatbázis: az ADO.NET Entitás Keretrendszer magában foglal egy könnyű súlyú adatbázist a relációs adatok felhasználó oldali gyorsítótárazására.
+
+Tervező eszközök, a Leképezés Tervezőhöz hasonlóan ezek szintén beépítettek az ADO.NET Entitás Keretrendszerbe. Egyszerűsíti a leképezéseken végzett feladatokat egy koncepciós sémából relációs sémába és meghatározza, hogy az entitás típus adott tulajdonságai mely táblához tartoznak az adatbázisban.
+Programozási réteg, rajta keresztül férünk hozzá az EDM-hez mint programozási konstrukcióhoz, amely felhasználható a programozási nyelveken.
+
+Objektum szolgáltatások, automatikusan generálják a kódot CLR osztályokhoz, amelyek az entitásnak megfelelő tulajdonságokkal rendelkeznek, ezzel lehetővé téve az entitások .NET objektumokként való példányosítását.
+
+Web szolgáltatások, az entitások segítségükkel web szolgáltatásként elérhetőek.
+
+Magas szintű szolgáltatások, mint például a jelentés szolgáltató, amely entitásokkal dolgozik relációs adatok helyett.
