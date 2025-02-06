@@ -1,0 +1,114 @@
+/* Fooldal.css */
+.welcome-container {
+    font-family: Arial, sans-serif;
+  }
+  
+  .hero-section {
+    position: relative;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    text-align: center;
+    color: white;
+    background-color: #003366; /* Banki kék háttér */
+    padding: 100px 0; /* Magasabb helyet biztosít a szövegnek */
+    background-image: url("./bankolas3.jpg");
+    background-position: center;
+}
+  
+  .hero-text {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .hero-text p {
+    font-size: 1.2rem;
+    color: #fff;
+  }
+  
+  .why-choose-us {
+    background-color: #f4f4f4;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+    margin-top: 700px; /* Távolság a Hero szekció alól */
+    background-image: url("./ugyfel4.jpg");
+    background-position: center
+  }
+  
+  .why-choose-us h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .feature-item {
+    flex-basis: 30%;
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  .call-to-action {
+    background-color: #003366;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 40px; /* Távolság a "Miért válassza a bankot?" szekció alól */
+    background-image: url("regi2.jpg");
+    background-position: center
+
+   ;
+  }
+  
+  .call-to-action h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .call-to-action p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .cta-button {
+    background-color: #003366;
+    color: white;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cta-button:hover {
+    background-color: #003366;
+  }
+
+.footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+
+ 
+
+  
