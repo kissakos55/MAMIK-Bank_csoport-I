@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\Maki\Desktop\MAMIKBankBackEnd\MAMIKBankBackEnd\bin\Release\net8.0\publish\</_PublishTargetUrl>
+    <History>True|2025-02-03T08:40:42.7982253Z||;True|2025-02-03T08:24:10.9771695+01:00||;False|2025-02-03T08:23:56.2076232+01:00||;True|2025-02-03T08:17:09.3989389+01:00||;True|2025-02-03T08:10:13.7372486+01:00||;False|2025-02-03T08:09:11.2146650+01:00||;True|2025-02-03T08:07:18.3833535+01:00||;True|2025-02-03T08:07:15.4778601+01:00||;True|2025-02-03T07:57:59.1973885+01:00||;True|2025-01-27T07:43:03.2329646+01:00||;True|2025-01-22T11:43:19.4443472+01:00||;False|2025-01-22T11:43:11.0961239+01:00||;False|2025-01-22T11:42:08.0341150+01:00||;True|2025-01-22T07:34:34.8424347+01:00||;True|2025-01-21T10:47:15.1572803+01:00||;True|2025-01-21T08:43:53.2985137+01:00||;True|2025-01-15T08:08:02.6462245+01:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>
