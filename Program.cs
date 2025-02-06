@@ -20,7 +20,7 @@ namespace MAMIKBankBackEnd
             mail.Subject = subject;
             mail.Body = body;
 
-            /*System.Net.Mail.Attachment attachment;
+            /*System.Net.Mail.Attachment attachment; xx
             attachment = new System.Net.Mail.Attachment("");
             mail.Attachments.Add(attachment);*/
 
