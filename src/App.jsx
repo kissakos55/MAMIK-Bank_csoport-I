@@ -5,6 +5,8 @@ import { Login } from './Login';
 import { Registration } from './Registration';
 import { Rolunk } from './Rolunk';
 import { Fooldal } from './Fooldal';
+import { Fooldalteszt } from './Fooldalteszt';
+
 
 export const App = () => {
   return (
@@ -35,6 +37,11 @@ export const App = () => {
                 <span className="nav-link">Rólunk</span>
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink to={'/Fooldalteszt'} className={({ isActive }) => "nav-link" + (isActive ? " active" : "")}>
+                <span className="nav-link">Bejelentkezesfooldalteszt</span>
+              </NavLink>
+            </li>
           </ul>
         </div>
       </nav>
@@ -44,6 +51,7 @@ export const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/Registration" element={<Registration />} />
         <Route path="/Rolunk" element={<Rolunk />} />
+        <Route path="/Fooldalteszt" element={<Fooldalteszt />} />
         <Route path="*" element={<Login />} />
       </Routes>
     </Router>
