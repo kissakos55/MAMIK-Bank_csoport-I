@@ -33,15 +33,11 @@ export const App = () => {
             </li>
 
             <li className="nav-item">
-              <NavLink to={'/Rolunk'} className={({ isActive }) => "nav-link" + (isActive ? " active" : "")}>
-                <span className="nav-link">Rólunk</span>
+              <NavLink to={'/Panaszkezeles'} className={({ isActive }) => "nav-link" + (isActive ? " active" : "")}>
+                <span className="nav-link">Panaszkezelés</span>
               </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink to={'/Fooldalteszt'} className={({ isActive }) => "nav-link" + (isActive ? " active" : "")}>
-                <span className="nav-link">Bejelentkezesfooldalteszt</span>
-              </NavLink>
-            </li>
+            
           </ul>
         </div>
       </nav>
@@ -50,8 +46,8 @@ export const App = () => {
         <Route path="/" element={<Fooldal />} />
         <Route path="/login" element={<Login />} />
         <Route path="/Registration" element={<Registration />} />
-        <Route path="/Rolunk" element={<Rolunk />} />
-        <Route path="/Fooldalteszt" element={<Fooldalteszt />} />
+        <Route path="/Panaszkezeles" element={<Rolunk />} />
+        
         <Route path="*" element={<Login />} />
       </Routes>
     </Router>
