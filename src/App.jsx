@@ -5,7 +5,7 @@ import { Login } from './Login';
 import { Registration } from './Registration';
 import { Rolunk } from './Rolunk';
 import { Fooldal } from './Fooldal';
-import { Fooldalteszt } from './Fooldalteszt';
+import { Rolunkmi } from './rolunkmi';
 
 
 export const App = () => {
@@ -37,6 +37,12 @@ export const App = () => {
                 <span className="nav-link">Panaszkezelés</span>
               </NavLink>
             </li>
+
+            <li className="nav-item">
+              <NavLink to={'/rolunkmi'} className={({ isActive }) => "nav-link" + (isActive ? " active" : "")}>
+                <span className="nav-link">Rólunk</span>
+              </NavLink>
+            </li>
             
           </ul>
         </div>
@@ -47,6 +53,7 @@ export const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/Registration" element={<Registration />} />
         <Route path="/Panaszkezeles" element={<Rolunk />} />
+        <Route path="/rolunkmi" element={<Rolunkmi />} />
         
         <Route path="*" element={<Login />} />
       </Routes>

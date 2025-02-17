@@ -1,0 +1,89 @@
+/* Alap stílusok */
+.rolunk-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+  }
+  
+  /* Gombok stílusai */
+  .toggle-button, .founders-button {
+    margin: 10px 0;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    background-color: #003366;  /* Zöld háttér */
+    color: white;
+    border: 2px solid #003366;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .toggle-button:hover, .founders-button:hover {
+    background-color: white;
+    color: #003366;
+    border-color: #003366;
+    transform: scale(1.05); /* Kicsit nagyobb lesz, ha fölé viszik az egeret */
+  }
+  
+  /* A szöveg stílusa, amikor megjelenik */
+  .info-box {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Alapítóink box és képek */
+  .founders-box {
+    position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: white;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 10;
+  transition: all 0.3s ease; /* Simább animáció */
+  width: 400px;  /* Kezdeti szélesség */
+  height: 200px;
+  }
+  
+  .founders-images {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .founders-images img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  .founder p {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    margin: 5px 0;  /* Nevek közötti távolság */
+    
+  }
+  .founder {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;  /* A név középre igazítása */
+  }
