@@ -22,7 +22,13 @@ export const Rolunkmi = () => {
         className="info-box"
         style={{ display: showText ? 'block' : 'none' }}
       >
-        <p>A MAMIK Bank a biztonságos és innovatív banki megoldások szolgáltatója. Küldetésünk, hogy ügyfeleink számára gyors, megbízható és modern pénzügyi szolgáltatásokat biztosítsunk.</p>
+        <p>A MAMIK Bank egy dinamikusan fejlődő pénzintézet, amely célja, hogy ügyfelei számára a legmodernebb banki szolgáltatásokat kínálja. Bankunk az innovációra és a bizalomra épít, miközben mindig figyelembe vesszük a változó gazdasági környezetet. Mi hiszünk abban, hogy a bankolásnak egyszerűnek és hozzáférhetőnek kell lennie mindenki számára, ezért a legújabb technológiai megoldásokat alkalmazzuk.
+
+MAMIK Bank ügyfelei számára személyre szabott pénzügyi megoldásokat biztosít, legyen szó megtakarításokról, hitelezésről vagy vállalati pénzügyi szolgáltatásokról. A digitális banki lehetőségek mellett a hagyományos személyes kiszolgálás is fontos szerepet kap, így mindenki megtalálja a számára legkényelmesebb módot a banki ügyintézéshez.
+
+Küldetésünk, hogy segítünk ügyfeleinknek pénzügyi céljaik elérésében, miközben biztosítjuk a legmagasabb szintű biztonságot és átláthatóságot. MAMIK Bank folyamatosan fejleszti szolgáltatásait, hogy megfeleljen a modern pénzügyi világ kihívásainak.
+
+A bankunknál a tisztesség, megbízhatóság és a kiemelkedő ügyfélszolgálat mindig az első helyen áll. Munkatársaink magas szintű szakértelemmel és elkötelezettséggel dolgoznak azon, hogy minden ügyfelünk számára a legjobb megoldásokat kínálják.</p>
       </motion.div>
     
       <button className="founders-button" onClick={() => setShowFounders(!showFounders)}>
