@@ -1,82 +1,89 @@
-/* Alap formázás a panaszkezelés oldalhoz */
-.panasz-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    text-align: center;
+/* Alap stílusok */
+.rolunk-container {
     padding: 20px;
+    font-family: Arial, sans-serif;
   }
   
   h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    text-align: center;
+    font-size: 36px;
     color: #333;
   }
   
-  .panasz-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 500px;
-    margin-top: 20px;
-    background-color: #f8f8f8;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-    width: 100%;
-  }
-  
-  label {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 5px;
-  }
-  
-  .form-input {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  textarea.form-input {
-    resize: vertical;
-    min-height: 100px;
-  }
-  
-  .submit-btn {
+  /* Gombok stílusai */
+  .toggle-button, .founders-button {
+    margin: 10px 0;
     padding: 12px 20px;
-    font-size: 1rem;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    background-color: #003366;  /* Zöld háttér */
+    color: white;
+    border: 2px solid #003366;
+    border-radius: 5px;
+    transition: all 0.3s ease;
   }
   
-  .submit-btn:hover {
-    background-color: #0056b3;
+  .toggle-button:hover, .founders-button:hover {
+    background-color: white;
+    color: #003366;
+    border-color: #003366;
+    transform: scale(1.05); /* Kicsit nagyobb lesz, ha fölé viszik az egeret */
   }
   
-  .success-message {
-    color: green;
-    font-weight: bold;
+  /* A szöveg stílusa, amikor megjelenik */
+  .info-box {
     margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    font-family: 'Roboto', sans-serif;
   }
   
-  .error-message {
-    color: red;
-    font-weight: bold;
-    margin-top: 20px;
+  /* Alapítóink box és képek */
+  .founders-box {
+    position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: white;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 10;
+  transition: all 0.3s ease; /* Simább animáció */
+  width: 400px;  /* Kezdeti szélesség */
+  height: 200px;
   }
   
+  .founders-images {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .founders-images img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  .founder p {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    margin: 5px 0;  /* Nevek közötti távolság */
+    
+  }
+  .founder {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;  /* A név középre igazítása */
+  }

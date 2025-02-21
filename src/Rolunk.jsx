@@ -1,78 +1,60 @@
 import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
-import './Rolunk.css'; // Itt is be kell importálni a CSS-t
-
+import './Rolunk.css';
+import { motion } from 'framer-motion';
+import mdominik from './mdominik.jpg'; 
+import mgabor from './mgabor.jpg'; 
+import kakos from './kakos.jpg'; 
 export const Rolunk = () => {
-  const [panasz, setPanasz] = useState('');
-  const [nev, setNev] = useState('');
-  const [email, setEmail] = useState('');
-  const [successMessage, setSuccessMessage] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
-
-  const sendPanasz = (e) => {
-    e.preventDefault();
-
-    const templateParams = {
-      from_name: nev,
-      from_email: email,
-      message: panasz,
-    };
-
-    emailjs
-      .send('service_id', 'template_id', templateParams, 'user_id')
-      .then(
-        (result) => {
-          setSuccessMessage('A panasz sikeresen elküldve!');
-          setErrorMessage('');
-        },
-        (error) => {
-          setErrorMessage('Hiba történt a panasz elküldésekor. Kérlek próbáld meg később.');
-          setSuccessMessage('');
-        }
-      );
-  };
+  const [showText, setShowText] = useState(false);
+  const [showFounders, setShowFounders] = useState(false);
 
   return (
-    <div className="panasz-container">
-      <h1>Panaszkezelés</h1>
-      <form onSubmit={sendPanasz} className="panasz-form">
-        <div className="form-group">
-          <label htmlFor="nev">Neved:</label>
-          <input
-            type="text"
-            id="nev"
-            value={nev}
-            onChange={(e) => setNev(e.target.value)}
-            required
-            className="form-input"
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="email">Email címed:</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            className="form-input"
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="panasz">Panasz leírása:</label>
-          <textarea
-            id="panasz"
-            value={panasz}
-            onChange={(e) => setPanasz(e.target.value)}
-            required
-            className="form-input"
-          />
-        </div>
-        <button type="submit" className="submit-btn">Panasz küldése</button>
-      </form>
-
-      {successMessage && <p className="success-message">{successMessage}</p>}
-      {errorMessage && <p className="error-message">{errorMessage}</p>}
+    <div className="rolunk-container">
+      <h1>Rólunk</h1>
+      <button className="toggle-button" onClick={() => setShowText(!showText)}>
+        {showText ? 'Elrejtés' : 'Rólunk'}
+      </button>
+      
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: showText ? 1 : 0, y: showText ? 0 : -20 }}
+        transition={{ duration: 0.5 }}
+        className="info-box"
+        style={{ display: showText ? 'block' : 'none' }}
+      >
+        <p>A MAMIK Bank a biztonságos és innovatív banki megoldások szolgáltatója. Küldetésünk, hogy ügyfeleink számára gyors, megbízható és modern pénzügyi szolgáltatásokat biztosítsunk.</p>
+      </motion.div>
+    
+      <button className="founders-button" onClick={() => setShowFounders(!showFounders)}>
+        {showFounders ? 'Alapítók elrejtése' : 'Alapítóink'}
+      </button>
+      
+      {showFounders && (
+        <motion.div
+          className="founders-box"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <h2>Alapítóink</h2>
+          <div className="founders-images">
+         <div>
+            <motion.img src={kakos} alt="Alapító 1" whileHover={{ scale: 1.1 }} />
+            <p>Kiss Ákos</p>
+         </div> 
+         <div>
+            <motion.img src={mdominik} alt="Alapító 2" whileHover={{ scale: 1.1 }} />
+            <p>Minka Dominik</p>
+         </div> 
+         <div>
+            <motion.img src={mgabor} alt="Alapító 3" whileHover={{ scale: 1.1 }} />
+            <p>Maklári Gábor</p>
+         </div> 
+          
+          </div>
+          
+        </motion.div>
+      )}
     </div>
   );
 };

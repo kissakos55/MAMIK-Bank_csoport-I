@@ -12,13 +12,11 @@ export const Registration = () => {
     teljesNev: "",
     email: "",
   });
-  const [error, setError] = useState(""); // Hibakezelés tárolása
   const navigate = useNavigate();
   const vantaRef = useRef(null);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    setError(""); // Ha módosítunk, töröljük a hibát
   };
 
   const generateSalt = (length) => {
@@ -32,12 +30,6 @@ export const Registration = () => {
   };
 
   const handleSubmit = async () => {
-    // Validálás: ellenőrizzük, hogy minden mező ki van-e töltve
-    if (!formData.felhasznaloNev || !formData.jelszo || !formData.teljesNev || !formData.email) {
-      setError("Minden mezőt ki kell tölteni!"); // Ha bármelyik mező üres, hibát adunk vissza
-      return;
-    }
-
     const salt = generateSalt(64);
     const hashedPassword = sha256(formData.jelszo + salt);
 
@@ -73,20 +65,14 @@ export const Registration = () => {
           left: "50%",
           transform: "translate(-50%, -50%)",
           backgroundColor: "rgba(0, 0, 0, 0.5)",
-          padding: "30px 50px",
+          padding: "30px 50px", /* Tágasabb padding balra-jobbra */
           borderRadius: "10px",
           textAlign: "center",
           color: "#fff",
-          width: "400px",
+          width: "400px", /* Növelt szélesség */
         }}
       >
         <h2>Regisztráció</h2>
-
-        {error && (
-          <div style={{ color: "red", marginBottom: "10px" }}>
-            <strong>{error}</strong>
-          </div>
-        )}
 
         <input
           type="text"
@@ -158,12 +144,12 @@ export const Registration = () => {
             marginTop: "20px",
             padding: "12px 20px",
             borderRadius: "5px",
-            backgroundColor: "#003366",
+            backgroundColor: "#003366", /* Banki kék háttér */
             color: "#fff",
             border: "none",
             cursor: "pointer",
             fontWeight: "bold",
-            width: "100%",
+            width: "100%", /* Gomb teljes szélessége */
           }}
         >
           Regisztráció

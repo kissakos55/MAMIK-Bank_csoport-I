@@ -1,100 +1,76 @@
-.App {
-  text-align: center;
-  
-
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-body{
+/* Body háttérkép beállítása */
+body {
   background-image: url("./mamikbank-high-resolution-logo.png");
+  background-size: cover;  /* A háttérkép kitöltse az egész képernyőt */
+  background-position: center 0%;  /* A háttérkép eltolása lefelé (20%-kal a tetejétől) */
+  background-repeat: no-repeat;  /* Ne ismétlődjön a háttérkép */
+  height: 100vh;  /* A háttérkép az egész képernyőt kitölti */
+  margin: 0; /* Nincs margó a body elem körül */
 }
+
+
 
 /* Navbar alap stílus */
 .navbar {
-  background-color: #003366; /* Banki sötétkék háttér */
-  padding: 10px 0; /* A navbar tetejének és aljának paddingja */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Enyhe árnyék */
+  background-color: rgba(0, 51, 102, 0.9); /* Fél átlátszó háttér a navbar-on */
+  padding: 10px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Navbar linkek alap stílusa */
 .navbar-nav .nav-link {
-  color: white !important; /* Fehér színű szöveg */
-  font-size: 18px; /* Kicsit nagyobb betűméret */
-  font-weight: bold; /* Vastag betűk */
-  text-transform: uppercase; /* Minden betű nagybetűs */
-  padding: 8px 16px; /* Kényelmesebb kattintási felület */
-  transition: all 0.3s ease; /* Finom átmenet a hover effektushoz */
+  color: white !important;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
 }
 
 /* Navbar linkek hover állapota */
 .navbar-nav .nav-link:hover {
-  color: #ffcc00 !important; /* Sárga szín a hover állapotnál */
-  background-color: rgba(255, 255, 255, 0.2); /* Enyhe áttetsző háttér a hover alatt */
-  border-radius: 5px; /* Lekerekített sarkok a hover alatt */
+  color: #ffcc00 !important;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
 }
 
 /* Aktív linkek stílusa */
 .navbar-nav .nav-link.active {
-  color: #ffcc00 !important; /* Sárga szín az aktív linkeknél */
-  font-weight: bold; /* Továbbra is vastag font */
+  color: #ffcc00 !important;
 }
 
-/* Navbar listák középre helyezése */
+/* Navbar elemek középre igazítása */
 .navbar-nav {
   display: flex;
-  justify-content: center; /* A linkek középre igazítása */
+  justify-content: center;
   list-style: none;
   padding-left: 0;
 }
 
-/* Navbar elemek közötti távolság */
-.navbar-nav .nav-item {
-  margin: 0 10px; /* Távolság az egyes elemek között */
-}
-
-/* Reszponzív viselkedés (mobil nézetre) */
+/* Reszponzív viselkedés mobil nézetre */
 @media (max-width: 768px) {
   .navbar-nav {
-    flex-direction: column; /* A linkek függőleges elrendezése kisebb képernyőkön */
-    align-items: center; /* A linkek középre igazítása */
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 5px 0;
   }
 
   .navbar-nav .nav-link {
-    font-size: 16px; /* Kisebb betűméret mobilon */
-    padding: 10px 20px; /* Kényelmesebb kattintás mobilon */
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+/* Kisebb képernyőkhöz igazítás */
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  .nav-link {
+    font-size: 1.2rem;
   }
 }
