@@ -6,7 +6,7 @@ using System.Text;
 
 namespace MAMIKBankBackEnd
 {
-
+     //beleraktunk egy space-t hogy lássuk, megy-e a github-update
     public class Program
     {
         public static int SaltLength = 64;
