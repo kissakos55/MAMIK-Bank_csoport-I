@@ -22,7 +22,13 @@ export const Rolunk = () => {
         className="info-box"
         style={{ display: showText ? 'block' : 'none' }}
       >
-        <p>A MAMIK Bank a biztonságos és innovatív banki megoldások szolgáltatója. Küldetésünk, hogy ügyfeleink számára gyors, megbízható és modern pénzügyi szolgáltatásokat biztosítsunk.</p>
+        <p>A MAMIK Bank egy dinamikusan fejlődő pénzintézet, amely elkötelezett amellett, hogy innovatív pénzügyi megoldásokkal szolgálja ki ügyfeleit. Célunk, hogy segíthessük vállalkozásokat és magánszemélyeket a pénzügyi döntéseikben, miközben biztosítjuk számukra a legmagasabb szintű ügyfélszolgálatot és megbízhatóságot. Bankunk modern technológiai háttérrel és szakértő csapattal dolgozik azon, hogy minden pénzügyi tranzakció zökkenőmentes és biztonságos legyen.
+
+A MAMIK Bank története több évtizedes múltra tekint vissza, és folyamatosan bővíti szolgáltatásait annak érdekében, hogy megfeleljen a piaci igényeknek és a legújabb trendeknek. Az ügyfelek számára testreszabott megoldásokat kínálunk, legyen szó személyi kölcsönökről, vállalati hitelekről vagy befektetési lehetőségekről. A digitális banki szolgáltatásaink révén ügyfeleink bárhonnan, bármikor elérhetik számláikat és kezelhetik pénzügyeiket.
+
+Számunkra az ügyfelek bizalma a legfontosabb érték, ezért minden tevékenységünket a legnagyobb átláthatósággal és tisztességgel végezzük. Bankunk folyamatosan fejleszti digitális platformjait, hogy még kényelmesebb és gyorsabb pénzügyi élményben részesíthessük ügyfeleinket. A MAMIK Bank filozófiája a hosszú távú, kölcsönösen előnyös kapcsolatokra épít, és célunk, hogy minden egyes ügyfelünket a legjobb pénzügyi megoldásokkal támogassuk.
+
+A fenntarthatóságra és társadalmi felelősségvállalásra is nagy figyelmet fordítunk, és aktívan részt veszünk olyan programokban, amelyek a közösség fejlődését szolgálják. A MAMIK Bank számára a fejlődés nemcsak a pénzügyi eredményekben, hanem a társadalmi és környezeti hatásokban is megmutatkozik. Továbbra is azon dolgozunk, hogy egyre több ember számára kínálhassunk olyan pénzügyi megoldásokat, amelyek hozzájárulnak a sikeres és biztos jövőhöz.</p>
       </motion.div>
     
       <button className="founders-button" onClick={() => setShowFounders(!showFounders)}>
