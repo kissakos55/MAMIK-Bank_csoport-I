@@ -1,0 +1,6 @@
+A személyes adatok menüpontba használjuk az ügyfeleknek a token ugyfel_azon végpontját.
+Személyes ügyek intézése a számlák controller token ugyfel_azonosító végpontot használjuk.
+A hozzáad a megtakarítás gombnál a tranzakcio kontrollert a post végpontot használjuk úgy, hogy a tranzakcio tipus mezőnél a "megtakaritas" kulcsot használjuk.
+Amikor bejelntkezik az oldalra a tranzakció rögzítése után mindig le kell kérni a megtakarítás összegét vagy az oldalon belül számoljuk és adjuk össze.
+A megtakarítások lekérdezése ugy működne, hogy azt a végpontot használjuk amibe szamla_azonosito és tranzakcio_tipus = megtakaritas.
+
