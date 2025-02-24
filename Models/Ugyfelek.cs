@@ -23,9 +23,11 @@ public partial class Ugyfelek
     public int Telefonszam { get; set; }
 
     public DateTime RegisztracioDatuma { get; set; }
+
     public virtual ICollection<Hitelkartyak>? Hitelkartyaks { get; set; } = new List<Hitelkartyak>();
 
     public virtual ICollection<Szamlak>? Szamlaks { get; set; } = new List<Szamlak>();
 
-    public virtual Felhasznalok? UgyfelAzonositoNavigation { get; set; } = null!;
+    [JsonIgnore]
+    public virtual Felhasznalok UgyfelAzonositoNavigation { get; set; } = null!;
 }

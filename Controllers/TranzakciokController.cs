@@ -1,5 +1,4 @@
-﻿using MAMIKBankBackEnd.DTO;
-using MAMIKBankBackEnd.Models;
+﻿using MAMIKBankBackEnd.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -8,40 +7,8 @@ namespace MAMIKBankBackEnd.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class Szamlak : ControllerBase
+    public class TranzakciokController : ControllerBase
     {
-        [HttpGet("UserEmailName/{token}")]
-
-        public async Task<IActionResult>
-           GetUserNameEmail(string token)
-        {
-            using (var cx = new MamikBankContext())
-                try
-                {
-                    if (Program.LoggedInUsers.ContainsKey
-                        (token) && Program.LoggedInUsers
-                        [token].Jogosultsag == 9)
-                    {
-                        return Ok(await cx.Felhasznaloks.Select(f =>
-                        (new UserEmailNameDTO
-                        {
-                            Email = f.Email,
-                            TeljesNev = f.TeljesNev
-                        })).ToListAsync());
-                    }
-                    else
-                    {
-                        return BadRequest("Nincs jogosultságod hozzá!");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    //return BadRquest(ex.Message);
-                    return BadRequest
-                (ex.InnerException?.Message);
-                }
-        }
-
         [HttpGet("{token}")]
 
         public async Task<IActionResult> Get(string token)
@@ -54,7 +21,7 @@ namespace MAMIKBankBackEnd.Controllers
                         (token) && Program.LoggedInUsers
                         [token].Jogosultsag == 9)
                     {
-                        return Ok(await cx.Felhasznaloks.ToListAsync());
+                        return Ok(await cx.Tranzakcioks.ToListAsync());
                     }
 
                     else
@@ -69,9 +36,10 @@ namespace MAMIKBankBackEnd.Controllers
                 (ex.InnerException?.Message);
                 }
         }
-        [HttpGet("{token},{id}")]
+        
+        [HttpGet("{token},{szamlaAzonosito}")]
 
-        public async Task<IActionResult> Get(string token, int id)
+        public async Task<IActionResult> Get(string token, int szamlaAzonosito)
         {
             using (var cx = new MamikBankContext())
             {
@@ -79,7 +47,33 @@ namespace MAMIKBankBackEnd.Controllers
                 {
                     if (Program.LoggedInUsers.ContainsKey(token) && Program.LoggedInUsers[token].Jogosultsag == 9)
                     {
-                        return Ok(await cx.Felhasznaloks.FirstOrDefaultAsync(f => f.Id == id));
+                        return Ok(await cx.Tranzakcioks.Where(f => f.SzamlaAzonosito == szamlaAzonosito).ToListAsync());
+                    }
+                    else
+                    {
+                        return BadRequest("Nincs jogod hozzá!");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    //return BadRequest(ex.Message);
+                    return BadRequest(ex.InnerException?.Message);
+                }
+            }
+        }
+        
+
+        [HttpGet("megtakaritas/{token},{szamlaAzonosito},{tranzakcioTipusa}")]
+
+        public async Task<IActionResult> Get(string token, int szamlaAzonosito, string tranzakcioTipusa)
+        {
+            using (var cx = new MamikBankContext())
+            {
+                try
+                {
+                    if (Program.LoggedInUsers.ContainsKey(token) && Program.LoggedInUsers[token].Jogosultsag == 9)
+                    {
+                        return Ok(await cx.Tranzakcioks.Where(f => f.SzamlaAzonosito == szamlaAzonosito && f.TranzakcioTipusa==tranzakcioTipusa).SumAsync(f=>f.Osszeg));
                     }
                     else
                     {
@@ -96,7 +90,7 @@ namespace MAMIKBankBackEnd.Controllers
 
 
         [HttpPost("{token}")]
-        public async Task<IActionResult> Post(string token, Felhasznalok user)
+        public async Task<IActionResult> Post(string token, Tranzakciok tranzakcio)
         {
             using (var cx = new MamikBankContext())
                 try
@@ -105,9 +99,9 @@ namespace MAMIKBankBackEnd.Controllers
                         (token) && Program.LoggedInUsers
                         [token].Jogosultsag == 9)
                     {
-                        await cx.Felhasznaloks.AddAsync(user);
+                        await cx.Tranzakcioks.AddAsync(tranzakcio);
                         await cx.SaveChangesAsync();
-                        return Ok("Új felhasználó felvéve.");
+                        return Ok("Új tranzakcio felvéve.");
                     }
 
                     else
@@ -124,7 +118,7 @@ namespace MAMIKBankBackEnd.Controllers
         }
 
         [HttpPut("{token}")]
-        public IActionResult Put(string token, Felhasznalok user)
+        public IActionResult Put(string token, Tranzakciok tranzakcio)
         {
             using (var cx = new MamikBankContext())
                 try
@@ -133,9 +127,9 @@ namespace MAMIKBankBackEnd.Controllers
                         (token) && Program.LoggedInUsers
                         [token].Jogosultsag == 9)
                     {
-                        cx.Felhasznaloks.Update(user);
+                        cx.Tranzakcioks.Update(tranzakcio);
                         cx.SaveChanges();
-                        return Ok("A felhasználó adatai módosítva..");
+                        return Ok("A tranzakcio adatai módosítva..");
                     }
 
                     else
@@ -161,9 +155,9 @@ namespace MAMIKBankBackEnd.Controllers
                         (token) && Program.LoggedInUsers
                         [token].Jogosultsag == 9)
                     {
-                        cx.Felhasznaloks.Remove(new Felhasznalok { Id = id });
+                        cx.Tranzakcioks.Remove(new Tranzakciok { Id = id });
                         cx.SaveChanges();
-                        return Ok("Új felhasználó adatai törölve.");
+                        return Ok("Trnzakcio adatai törölve.");
                     }
 
                     else
