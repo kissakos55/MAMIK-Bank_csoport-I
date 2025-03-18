@@ -66,6 +66,8 @@ export const SzemelyesAdataim = () => {
   const filteredData = { ...data };
   delete filteredData.id;
   delete filteredData.ugyfelAzonosito;
+ 
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -78,6 +80,7 @@ export const SzemelyesAdataim = () => {
 
   const handleSaveData = async () => {
     try {
+      console.log(data);
       const response = await axios.put(`http://localhost:5000/api/Ugyfelek/${user.token}`, data);
       if (response.status === 200) {
         alert("Sikeres adatmentés");

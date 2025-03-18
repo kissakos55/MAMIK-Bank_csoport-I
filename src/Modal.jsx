@@ -62,7 +62,7 @@ const Modal = ({ show, onClose, user }) => {
         <h1>Banki Személyes Ügyek</h1>
         <div>
           <p><strong>Név:</strong> {user ? user.name : "Ismeretlen"}</p>
-          <p><strong>Számlaszám:</strong> {accountNumber}</p>
+          <p><strong>Számlaszám:</strong> {user ? user.accountNumber : "Ismeretlen"}</p>
           <p><strong>Számla egyenleg:</strong> {balance} Ft</p>
           <p><strong>Megtakarítás:</strong> {savings} Ft</p>
         </div>
