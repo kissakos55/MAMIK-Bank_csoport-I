@@ -28,6 +28,5 @@ public partial class Ugyfelek
 
     public virtual ICollection<Szamlak>? Szamlaks { get; set; } = new List<Szamlak>();
 
-    [JsonIgnore]
-    public virtual Felhasznalok UgyfelAzonositoNavigation { get; set; } = null!;
+    public virtual Felhasznalok? UgyfelAzonositoNavigation { get; set; } = null!;
 }

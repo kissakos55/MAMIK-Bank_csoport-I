@@ -67,6 +67,7 @@ namespace MAMIKBankBackEnd.Controllers
                 (ex.InnerException?.Message);
                 }
         }
+        /*
 
         [HttpGet("{token},{ugyfelAzon}")]
 
@@ -92,6 +93,32 @@ namespace MAMIKBankBackEnd.Controllers
                 }
             }
         }
+        */
+        [HttpGet("{token},{ugyfelAzon}")]
+
+        public async Task<IActionResult> Get(string token, int ugyfelAzon)
+        {
+            using (var cx = new MamikBankContext())
+            {
+                try
+                {
+                    if (Program.LoggedInUsers.ContainsKey(token) && Program.LoggedInUsers[token].Jogosultsag == 9)
+                    {
+                        return Ok(await cx.Ugyfeleks.Select(f=>new UgyfelekDTO {Id=f.Id, UgyfelAzonosito=f.UgyfelAzonosito, Nev=f.Nev, SzuletesiDatum=f.SzuletesiDatum,SzemelyiIgazolvanySzam=f.SzemelyiIgazolvanySzam,Lakcim=f.Lakcim,Email=f.Email,Telefonszam=f.Telefonszam,RegisztracioDatuma=f.RegisztracioDatuma }).FirstOrDefaultAsync(f => f.UgyfelAzonosito == ugyfelAzon));
+                    }
+                    else
+                    {
+                        return BadRequest("Nincs jogod hozzá!");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    //return BadRequest(ex.Message);
+                    return BadRequest(ex.InnerException?.Message);
+                }
+            }
+        }
+
 
 
         [HttpPost("{token}")]
