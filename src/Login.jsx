@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import sha256 from "js-sha256";
 import WAVES from "vanta/dist/vanta.waves.min";
+import * as THREE from 'three';
 import Modal from "./Modal"; // Importáljuk a modált, ha nincs még
 import { useNavigate } from "react-router-dom"; // Importáljuk a navigációt
 
@@ -25,6 +26,7 @@ export const Login = ({ login }) => {
     if (vantaRef.current) {
       WAVES({
         el: vantaRef.current,
+        THREE,
         color: 0x0b5fae,
         waveHeight: 15,
         waveSpeed: 0.5,
