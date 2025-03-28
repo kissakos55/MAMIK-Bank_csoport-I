@@ -33,26 +33,23 @@ export const Panaszkezeles = () => {
     };
   }, []);
 
-  const sendPanasz = (e) => {
+  const sendPanasz = async(e) => {
     e.preventDefault();
     const templateParams = {
       from_name: nev,
       from_email: email,
       message: panasz,
     };
-
+    try {
+      await
     emailjs
-      .send("service_id", "template_id", templateParams, "user_id")
-      .then(
-        () => {
+      .send("service_id", "template_id", templateParams, "user_id");
           setSuccessMessage("A panasz sikeresen elküldve!");
           setErrorMessage("");
-        },
-        () => {
+      } catch (error) {
           setErrorMessage("Hiba történt a panasz elküldésekor. Kérlek próbáld meg később.");
           setSuccessMessage("");
-        }
-      );
+        };
   };
 
   return (
