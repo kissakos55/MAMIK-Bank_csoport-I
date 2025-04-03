@@ -1,0 +1,24 @@
+﻿<Window x:Class="BackEndWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BackEndWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        
+        <Menu>
+
+            <MenuItem Header="Fájl">
+                <MenuItem Header="Belépés" Click="LoginWindows_menu">
+
+                </MenuItem>
+                <MenuItem Header="Kilépés">
+
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Felhasznalok" Click="Felhasznalok_menu" Checked="Felhasznalok_menu"></MenuItem>
+        </Menu>
+    </Grid>
+</Window>
