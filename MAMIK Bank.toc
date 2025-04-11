@@ -1,0 +1,50 @@
+\select@language {magyar} \contentsline {chapter}{Bevezetés}{5}{chapter*.2}%
+\select@language {magyar} \contentsline {chapter}{\numberline {1}Technológiák}{6}{chapter.1}%
+\select@language {magyar} \contentsline {section}{\numberline {1.1}Relációs adatbáziskezelő}{6}{section.1.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {1.1.1}Felépítés}{6}{subsection.1.1.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {1.1.2}Főbb jellemzők}{6}{subsection.1.1.2}%
+\select@language {magyar} \contentsline {section}{\numberline {1.2}PHP-MyAdmin - MySQL - MariaDB}{7}{section.1.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {1.2.1}PHPMyAdmin}{7}{subsection.1.2.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {1.2.2}MySQL}{7}{subsection.1.2.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {1.2.3}MariaDB}{8}{subsection.1.2.3}%
+\select@language {magyar} \contentsline {section}{\numberline {1.3}React Native}{9}{section.1.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {1.3.1}A React}{9}{subsection.1.3.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {1.3.2}React DOM és Virtual DOM}{10}{subsection.1.3.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {1.3.3}Renderelési folyamat}{10}{subsection.1.3.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {1.3.4}React renderelés menete}{11}{subsection.1.3.4}%
+\select@language {magyar} \contentsline {chapter}{\numberline {2}Projekt bemutatása}{12}{chapter.2}%
+\select@language {magyar} \contentsline {section}{\numberline {2.1}Adatbázis bemutatása}{13}{section.2.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.1.1}Tranzakciók}{13}{subsection.2.1.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.1.2}Hitelkártyák}{14}{subsection.2.1.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.1.3}Számlák}{14}{subsection.2.1.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.1.4}Ügyfelek}{14}{subsection.2.1.4}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.1.5}Felhasználók}{15}{subsection.2.1.5}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.1.6}Kapcsolatok az Adatbázisban}{15}{subsection.2.1.6}%
+\select@language {magyar} \contentsline {section}{\numberline {2.2}Backend bemutatása}{16}{section.2.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.2.1}Login és Logout}{16}{subsection.2.2.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.2.2}Regisztráció}{16}{subsection.2.2.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.2.3}Számlák}{17}{subsection.2.2.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.2.4}Tranzakciók}{19}{subsection.2.2.4}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.2.5}Ügyfelek}{20}{subsection.2.2.5}%
+\select@language {magyar} \contentsline {section}{\numberline {2.3}Frontend bemutatása}{22}{section.2.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.3.1}Weboldal áttekintése}{22}{subsection.2.3.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.3.2}Megjelenés és design}{23}{subsection.2.3.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.3.3}Funkciók}{23}{subsection.2.3.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.3.4}Banki személyes ügyek modális ablak}{24}{subsection.2.3.4}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.3.5}Biztonság és Ügyfélszolgálat}{24}{subsection.2.3.5}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.3.6}Funkciók és Jellemzők}{25}{subsection.2.3.6}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.3.7}Kapcsolat és Céginformációk}{25}{subsection.2.3.7}%
+\select@language {magyar} \contentsline {section}{\numberline {2.4}WPF bemutatása}{26}{section.2.4}%
+\select@language {magyar} \contentsline {section}{\numberline {2.5}C\# .Net Web API}{27}{section.2.5}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.5.1}A Postman:}{27}{subsection.2.5.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.5.2}Unit tesztelés}{27}{subsection.2.5.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.5.3}Hibakeresés (Debugging)}{28}{subsection.2.5.3}%
+\select@language {magyar} \contentsline {section}{\numberline {2.6}Swagger API Dokumentáció}{28}{section.2.6}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.6.1}BackupRestore}{28}{subsection.2.6.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.6.2}FileUpload}{28}{subsection.2.6.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.6.3}Jelző}{28}{subsection.2.6.3}%
+\select@language {magyar} \contentsline {section}{\numberline {2.7}Entity Framework}{29}{section.2.7}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.7.1}Az ADO.NET Entitás-keretrendszer }{29}{subsection.2.7.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.7.2}CRUD:}{30}{subsection.2.7.2}%
+\select@language {magyar} \contentsline {chapter}{Összegzés}{31}{chapter*.3}%
+\select@language {magyar} \contentsline {chapter}{Irodalomjegyz\'ek}{33}{chapter*.4}%
